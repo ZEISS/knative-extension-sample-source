@@ -1,11 +1,19 @@
 .DEFAULT_GOAL := build
 
+-include .env
+export
+
 # Go variables
 GO 					?= go
-GO_RUN_TOOLS 		?= $(GO) run -mod=readonly
+GO_RUN_TOOLS 		?= $(GO) run 
 GO_TEST 			?= $(GO_RUN_TOOLS) gotest.tools/gotestsum --format pkgname
 GO_RELEASER 		?= $(GO_RUN_TOOLS) github.com/goreleaser/goreleaser
 GO_MOD				?= $(shell ${GO} list -m)
+
+KO 					?= $(GO_RUN_TOOLS) github.com/google/ko
+
+KNATIVE_SERVING		?= 1.17.0
+KNATIVE_EVENTING	?= 1.17.2
 
 .PHONY: release
 release: ## Release the project.
@@ -22,6 +30,15 @@ generate: ## Generate code.
 .PHONY: mocks
 mocks: ## Generate mocks.
 	$(GO_RUN_TOOLS) github.com/vektra/mockery/v2
+
+.PHONY: deploy
+deploy: ## Deploy the project.
+	$(KO) apply -j 1 -BRf config/
+
+.PHONY: setup
+setup: ## Setup the project.
+	kind create cluster --config cluster.yaml
+
 
 .PHONY: fmt
 fmt: ## Run go fmt against code.

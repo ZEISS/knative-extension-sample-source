@@ -31,7 +31,7 @@ type SamplesV1alpha1Interface interface {
 	SampleSourcesGetter
 }
 
-// SamplesV1alpha1Client is used to interact with features provided by the samples.knative.dev group.
+// SamplesV1alpha1Client is used to interact with features provided by the sources.eventing.zeiss.com group.
 type SamplesV1alpha1Client struct {
 	restClient rest.Interface
 }

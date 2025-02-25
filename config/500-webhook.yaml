@@ -1,24 +1,10 @@
-# Copyright 2020 The Knative Authors
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sample-source-webhook
-  namespace: knative-samples
+  namespace: sources-samples
   labels:
-    samples.knative.dev/release: devel
+    sources.eventing.zeiss.com/release: devel
 spec:
   replicas: 1
   selector:
@@ -42,9 +28,9 @@ spec:
 
       serviceAccountName: sample-source-webhook
       containers:
-        - name: samplesource-webhook
+        - name: sample-source-webhook
           terminationMessagePolicy: FallbackToLogsOnError
-          image: ko://knative.dev/sample-source/cmd/webhook
+          image: ko://github.com/zeiss/knative-extension-sample-source/cmd/webhook
           env:
           - name: SYSTEM_NAMESPACE
             valueFrom:
@@ -55,7 +41,7 @@ spec:
           - name: METRICS_DOMAIN
             value: knative.dev/eventing
           - name: WEBHOOK_NAME
-            value: samplesource-webhook
+            value: sample-source-webhook
           - name: POD_NAME
             valueFrom:
               fieldRef:
@@ -79,10 +65,10 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    samples.knative.dev/release: devel
+    sources.eventing.zeiss.com/release: devel
     role: sample-source-webhook
   name: sample-source-webhook
-  namespace: knative-samples
+  namespace: sources-samples
 spec:
   ports:
     - name: https-webhook

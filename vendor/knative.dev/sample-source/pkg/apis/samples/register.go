@@ -17,5 +17,5 @@ limitations under the License.
 package samples
 
 const (
-	GroupName = "samples.knative.dev"
+	GroupName = "sources.eventing.zeiss.com"
 )

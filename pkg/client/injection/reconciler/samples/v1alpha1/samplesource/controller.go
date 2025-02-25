@@ -44,7 +44,7 @@ import (
 
 const (
 	defaultControllerAgentName = "samplesource-controller"
-	defaultFinalizerName       = "samplesources.samples.knative.dev"
+	defaultFinalizerName       = "samplesources.sources.eventing.zeiss.com"
 )
 
 // NewImpl returns a controller.Impl that handles queuing and feeding work from
@@ -103,7 +103,7 @@ func NewImpl(ctx context.Context, r Interface, optionsFns ...controller.OptionsF
 
 	logger = logger.With(
 		zap.String(logkey.ControllerType, ctrTypeName),
-		zap.String(logkey.Kind, "samples.knative.dev.SampleSource"),
+		zap.String(logkey.Kind, "sources.eventing.zeiss.com.SampleSource"),
 	)
 
 	impl := controller.NewContext(ctx, rec, controller.ControllerOptions{WorkQueueName: ctrTypeName, Logger: logger})

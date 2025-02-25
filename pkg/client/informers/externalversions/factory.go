@@ -253,9 +253,9 @@ type SharedInformerFactory interface {
 	// client.
 	InformerFor(obj runtime.Object, newFunc internalinterfaces.NewInformerFunc) cache.SharedIndexInformer
 
-	Samples() samples.Interface
+	Samples() sources.eventing.zeiss.comInterface
 }
 
-func (f *sharedInformerFactory) Samples() samples.Interface {
-	return samples.New(f, f.namespace, f.tweakListOptions)
+func (f *sharedInformerFactory) Samples() sources.eventing.zeiss.comInterface {
+	return sources.eventing.zeiss.comNew(f, f.namespace, f.tweakListOptions)
 }

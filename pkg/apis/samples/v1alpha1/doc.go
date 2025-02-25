@@ -1,3 +1,3 @@
 // +k8s:deepcopy-gen=package
-// +groupName=eventing.zeiss.com
+// +groupName=sources.eventing.zeiss.com
 package v1alpha1

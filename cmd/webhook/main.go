@@ -51,7 +51,7 @@ func NewDefaultingAdmissionController(ctx context.Context, cmw configmap.Watcher
 	return defaulting.NewAdmissionController(ctx,
 
 		// Name of the resource webhook.
-		fmt.Sprintf("defaulting.webhook.%s.knative.dev", system.Namespace()),
+		fmt.Sprintf("defaulting.webhook.%s.sources.eventing.zeiss.com", system.Namespace()),
 
 		// The path on which to serve the webhook.
 		"/defaulting",
@@ -104,7 +104,7 @@ func NewConfigValidationController(ctx context.Context, cmw configmap.Watcher) *
 	return configmaps.NewAdmissionController(ctx,
 
 		// Name of the configmap webhook.
-		fmt.Sprintf("config.webhook.%s.knative.dev", system.Namespace()),
+		fmt.Sprintf("config.webhook.%s.eventing.zeiss.com", system.Namespace()),
 
 		// The path on which to serve the webhook.
 		"/config-validation",
