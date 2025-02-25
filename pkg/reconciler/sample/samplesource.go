@@ -53,7 +53,6 @@ var _ reconcilersamplesource.Interface = (*Reconciler)(nil)
 
 // ReconcileKind implements Interface.ReconcileKind.
 func (r *Reconciler) ReconcileKind(ctx context.Context, src *v1alpha1.SampleSource) pkgreconciler.Event {
-
 	ctx = sourcesv1.WithURIResolver(ctx, r.sinkResolver)
 
 	ra, sb, event := r.dr.ReconcileDeployment(ctx, src, makeSinkBinding(src),
