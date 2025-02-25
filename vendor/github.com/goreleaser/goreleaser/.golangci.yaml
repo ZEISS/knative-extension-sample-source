@@ -1,0 +1,37 @@
+run:
+  go: "1.21"
+  timeout: 5m
+linters:
+  enable:
+    - thelper
+    - gofumpt
+    - tparallel
+    - unconvert
+    - unparam
+    - wastedassign
+    - revive
+    - forbidigo
+    - tagliatelle
+    - misspell
+    - depguard
+    - testifylint
+linters-settings:
+  staticcheck:
+    checks:
+      - all
+      - "-SA1019"
+  forbidigo:
+    forbid:
+      - 'ioutil\.*'
+  tagliatelle:
+    case:
+      use-field-name: false
+      rules:
+        yaml: snake
+        json: snake
+  depguard:
+    rules:
+      main:
+        deny:
+          - pkg: "github.com/pkg/errors"
+            desc: "use stdlib instead"
