@@ -1,0 +1,33 @@
+# Automatically normalize line endings for all text-based files
+# http://git-scm.com/docs/gitattributes#_end_of_line_conversion
+* text=auto
+
+# For the following file types, normalize line endings to LF on
+# checkin and prevent conversion to CRLF when they are checked out
+# (this is required in order to prevent newline related issues like,
+# for example, after the build script is run)
+.*      text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.sh    text eol=lf
+*.txt   text eol=lf
+*.xml   text eol=lf
+
+# This file is documented at https://git-scm.com/docs/gitattributes.
+# Linguist-specific attributes are documented at
+# https://github.com/github/linguist.
+
+**/zz_generated.*.go linguist-generated=true
+/pkg/client/** linguist-generated=true
+/test/client/** linguist-generated=true
+
+# coverage-excluded is an attribute used to explicitly exclude a path from being included in code
+# coverage. If a path is marked as linguist-generated already, it will be implicitly excluded and
+# there is no need to add the coverage-excluded attribute
+/pkg/**/testing/** coverage-excluded=true
+/vendor/** coverage-excluded=true
+/test/** coverage-excluded=true
+/cmd/**/main.go coverage-excluded=true
