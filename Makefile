@@ -2,7 +2,7 @@
 
 # Go variables
 GO 					?= go
-GO_RUN_TOOLS 		?= $(GO) run -modfile ./tools/go.mod -mod=readonly
+GO_RUN_TOOLS 		?= $(GO) run -mod=readonly
 GO_TEST 			?= $(GO_RUN_TOOLS) gotest.tools/gotestsum --format pkgname
 GO_RELEASER 		?= $(GO_RUN_TOOLS) github.com/goreleaser/goreleaser
 GO_MOD				?= $(shell ${GO} list -m)
