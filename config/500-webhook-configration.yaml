@@ -1,7 +1,7 @@
 apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
-  name: defaulting.webhook.sources-samples.eventing.zeiss.com
+  name: defaulting.webhook.sources-samples.sources.eventing.zeiss.com
   labels:
     sources.eventing.zeiss.com/release: devel
 webhooks:
@@ -12,12 +12,12 @@ webhooks:
         namespace: sources-samples
     sideEffects: None
     failurePolicy: Fail
-    name: defaulting.webhook.sources-samples.eventing.zeiss.com
+    name: defaulting.webhook.sources-samples.sources.eventing.zeiss.com
 ---
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
-  name: validation.webhook.sources-samples.eventing.zeiss.com
+  name: validation.webhook.sources-samples.sources.eventing.zeiss.com
   labels:
     sources.eventing.zeiss.com/release: devel
 webhooks:
@@ -28,12 +28,12 @@ webhooks:
         namespace: sources-samples
     sideEffects: None
     failurePolicy: Fail
-    name: validation.webhook.sources-samples.eventing.zeiss.com
+    name: validation.webhook.sources-samples.sources.eventing.zeiss.com
 ---
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
-  name: config.webhook.sources-samples.eventing.zeiss.com
+  name: config.webhook.sources-samples.sources.eventing.zeiss.com
   labels:
     sources.eventing.zeiss.com/release: devel
 webhooks:
@@ -44,7 +44,7 @@ webhooks:
         namespace: sources-samples
     sideEffects: None
     failurePolicy: Fail
-    name: config.webhook.sources-samples.eventing.zeiss.com
+    name: config.webhook.sources-samples.sources.eventing.zeiss.com
     namespaceSelector:
       matchExpressions:
         - key: sources.eventing.zeiss.com/release

@@ -39,7 +39,6 @@ deploy: ## Deploy the project.
 setup: ## Setup the project.
 	kind create cluster --config cluster.yaml
 
-
 .PHONY: fmt
 fmt: ## Run go fmt against code.
 	$(GO_RUN_TOOLS) mvdan.cc/gofumpt -w .
@@ -69,3 +68,6 @@ clean: ## Remove previous build.
 .PHONY: help
 help: ## Display this help screen.
 	@grep -E '^[a-z.A-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+# codegen
+include hack/inc.codegen.mk

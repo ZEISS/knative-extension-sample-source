@@ -34,7 +34,7 @@ import (
 	"knative.dev/pkg/webhook/resourcesemantics/defaulting"
 	"knative.dev/pkg/webhook/resourcesemantics/validation"
 
-	"knative.dev/sample-source/pkg/apis/samples/v1alpha1"
+	"github.com/zeiss/knative-extension-sample-source/pkg/apis/samples/v1alpha1"
 )
 
 var types = map[schema.GroupVersionKind]resourcesemantics.GenericCRD{
@@ -76,7 +76,7 @@ func NewValidationAdmissionController(ctx context.Context, cmw configmap.Watcher
 	return validation.NewAdmissionController(ctx,
 
 		// Name of the resource webhook.
-		fmt.Sprintf("validation.webhook.%s.knative.dev", system.Namespace()),
+		fmt.Sprintf("validation.webhook.%s.sources.eventing.zeiss.com", system.Namespace()),
 
 		// The path on which to serve the webhook.
 		"/resource-validation",
@@ -104,7 +104,7 @@ func NewConfigValidationController(ctx context.Context, cmw configmap.Watcher) *
 	return configmaps.NewAdmissionController(ctx,
 
 		// Name of the configmap webhook.
-		fmt.Sprintf("config.webhook.%s.eventing.zeiss.com", system.Namespace()),
+		fmt.Sprintf("config.webhook.%s.sources.eventing.zeiss.com", system.Namespace()),
 
 		// The path on which to serve the webhook.
 		"/config-validation",

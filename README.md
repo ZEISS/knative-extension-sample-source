@@ -16,5 +16,7 @@ ko apply -BRf config
 
 ### Examples 
 
+Install the [Knative Serving](https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/#prerequisites) before installing the examples.
+
 To see examples of the `Sources` and `Bindings` in action, check out our
 [examples](./examples/README.md) directory.

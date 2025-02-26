@@ -15,14 +15,14 @@ limitations under the License.
 package main
 
 import (
+	myadapter "github.com/zeiss/knative-extension-sample-source/pkg/adapter"
 	"knative.dev/eventing/pkg/adapter/v2"
 	"knative.dev/pkg/signals"
-	myadapter "knative.dev/sample-source/pkg/adapter"
 )
 
 func main() {
 	ctx := signals.NewContext()
 	ctx = adapter.WithInjectorEnabled(ctx)
 
-	adapter.MainWithContext(ctx, "sample-source", myadapter.NewEnv, myadapter.NewAdapter)
+	adapter.MainWithContext(ctx, "samples-source", myadapter.NewEnv, myadapter.NewAdapter)
 }
