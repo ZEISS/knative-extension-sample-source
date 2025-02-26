@@ -20,8 +20,8 @@ require (
 	k8s.io/code-generator v0.32.2
 	k8s.io/kube-openapi v0.0.0-20241212222426-2c72e554b1e7
 	knative.dev/eventing v0.44.0
-	knative.dev/hack v0.0.0-20250217122557-ce4c934f30e5
-	knative.dev/pkg v0.0.0-20250219013713-9e265611c097
+	knative.dev/hack v0.0.0-20250116150306-c142b4835bc5
+	knative.dev/pkg v0.0.0-20250117084104-c43477f0052b
 	mvdan.cc/gofumpt v0.7.0
 
 )
@@ -476,6 +476,7 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	honnef.co/go/tools v0.6.0 // indirect
 	k8s.io/apiextensions-apiserver v0.32.1 // indirect
+	k8s.io/gengo v0.0.0-20240404160639-a0386bf69313 // indirect
 	k8s.io/gengo/v2 v2.0.0-20240911193312-2b36238f13e9 // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
 	k8s.io/utils v0.0.0-20241210054802-24370beab758 // indirect

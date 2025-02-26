@@ -37,7 +37,7 @@ deploy: ## Deploy the project.
 
 .PHONY: setup
 setup: ## Setup the project.
-	kind create cluster --config cluster.yaml
+	kind create cluster --config .cluster.yaml
 
 .PHONY: fmt
 fmt: ## Run go fmt against code.
