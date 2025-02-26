@@ -19,7 +19,7 @@ require (
 	k8s.io/client-go v0.32.2
 	k8s.io/code-generator v0.32.2
 	k8s.io/kube-openapi v0.0.0-20241212222426-2c72e554b1e7
-	knative.dev/eventing v0.44.0
+	knative.dev/eventing v0.44.2
 	knative.dev/hack v0.0.0-20250116150306-c142b4835bc5
 	knative.dev/pkg v0.0.0-20250117084104-c43477f0052b
 	mvdan.cc/gofumpt v0.7.0
