@@ -5,7 +5,7 @@ go 1.24
 require (
 	github.com/cloudevents/sdk-go/v2 v2.15.2
 	github.com/golangci/golangci-lint v1.64.5
-	github.com/google/go-cmp v0.6.0
+	github.com/google/go-cmp v0.7.0
 	github.com/google/ko v0.17.1
 	github.com/goreleaser/goreleaser v1.24.0
 	github.com/kelseyhightower/envconfig v1.4.0
