@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-source-webhook
+  name: samplesource-webhook
   namespace: knative-samples
   labels:
     sources.eventing.zeiss.com/release: devel
@@ -9,8 +9,8 @@ spec:
   replicas: 1
   selector:
     matchLabels: &labels
-      app: sample-source-webhook
-      role: sample-source-webhook
+      app: samplesource-webhook
+      role: samplesource-webhook
   template:
     metadata:
       labels: *labels
@@ -22,11 +22,11 @@ spec:
           - podAffinityTerm:
               labelSelector:
                 matchLabels:
-                  app: sample-source-webhook
+                  app: samplesource-webhook
               topologyKey: kubernetes.io/hostname
             weight: 100
 
-      serviceAccountName: sample-source-webhook
+      serviceAccountName: samplesource-webhook
       containers:
         - name: samplesource-webhook
           terminationMessagePolicy: FallbackToLogsOnError
@@ -66,8 +66,8 @@ kind: Service
 metadata:
   labels:
     sources.eventing.zeiss.com/release: devel
-    role: sample-source-webhook
-  name: sample-source-webhook
+    role: samplesource-webhook
+  name: samplesource-webhook
   namespace: knative-samples
 spec:
   ports:
@@ -75,4 +75,4 @@ spec:
       port: 443
       targetPort: 8443
   selector:
-    role: sample-source-webhook
+    role: samplesource-webhook

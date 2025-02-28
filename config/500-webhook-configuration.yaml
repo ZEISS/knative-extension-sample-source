@@ -1,0 +1,60 @@
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: defaulting.webhook.sample.sources.eventing.zeiss.com
+  labels:
+    sources.eventing.zeiss.com/release: devel
+webhooks:
+  - admissionReviewVersions: ["v1", "v1beta1"]
+    clientConfig:
+      service:
+        name: samplesource-webhook
+        namespace: knative-samples
+    sideEffects: None
+    failurePolicy: Fail
+    name: defaulting.webhook.sample.sources.eventing.zeiss.com
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: validation.webhook.sample.sources.eventing.zeiss.com
+  labels:
+    sources.eventing.zeiss.com/release: devel
+webhooks:
+  - admissionReviewVersions: ["v1", "v1beta1"]
+    clientConfig:
+      service:
+        name: samplesource-webhook
+        namespace: knative-samples
+    sideEffects: None
+    failurePolicy: Fail
+    name: validation.webhook.sample.sources.eventing.zeiss.com
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: config.webhook.sample.sources.eventing.zeiss.com
+  labels:
+    sources.eventing.zeiss.com/release: devel
+webhooks:
+  - admissionReviewVersions: ["v1", "v1beta1"]
+    clientConfig:
+      service:
+        name: samplesource-webhook
+        namespace: knative-samples
+    sideEffects: None
+    failurePolicy: Fail
+    name: config.webhook.sample.sources.eventing.zeiss.com
+    namespaceSelector:
+      matchExpressions:
+        - key: sources.eventing.zeiss.com/release
+          operator: Exists
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sample-webhook-certs
+  namespace: knative-samples
+  labels:
+    sources.eventing.zeiss.com/release: devel
+# The data is populated at install time.

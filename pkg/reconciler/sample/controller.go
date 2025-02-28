@@ -3,7 +3,7 @@ package sample
 import (
 	"context"
 
-	reconcilersource "github.com/zeiss/knative-extension-sample-source/pkg/reconciler"
+	reconcilersource "knative.dev/eventing/pkg/reconciler/source"
 
 	"github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
 
@@ -35,7 +35,7 @@ func NewController(
 	r := &Reconciler{
 		dr: &reconciler.DeploymentReconciler{KubeClientSet: kubeclient.Get(ctx)},
 		// Config accessor takes care of tracing/config/logging config propagation to the receive adapter
-		configAccessor: reconcilersource.WatchConfigurations(ctx, "sample-source", cmw),
+		configAccessor: reconcilersource.WatchConfigurations(ctx, "samplesources", cmw),
 	}
 	if err := envconfig.Process("", r); err != nil {
 		logging.FromContext(ctx).Panicf("required environment variable is not defined: %v", err)

@@ -1,4 +1,4 @@
-apiVersion: sources.knative.dev/v1alpha1
+apiVersion: sources.eventing.zeiss.com/v1alpha1
 kind: SampleSource
 metadata:
   name: samplesource-sample

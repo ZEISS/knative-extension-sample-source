@@ -32,16 +32,16 @@ subjects:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: sample-source-webhook-rolebinding
+  name: samplesource-webhook-rolebinding
   labels:
     sources.eventing.zeiss.com/release: devel
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: sample-source-webhook
+  name: samplesource-webhook
 subjects:
   - kind: ServiceAccount
-    name: sample-source-webhook
+    name: samplesource-webhook
     namespace: knative-samples
 
 ---
