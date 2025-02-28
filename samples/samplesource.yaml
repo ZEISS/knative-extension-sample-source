@@ -1,16 +1,3 @@
-apiVersion: sources.eventing.zeiss.com/v1alpha1
-kind: SampleSource
-metadata:
-  name: samplesource-sample
-spec:
-  sink:
-    ref:
-      apiVersion: messaging.knative.dev/v1
-      kind: InMemoryChannel
-      name: samplechannel
-
----
-
 apiVersion: messaging.knative.dev/v1
 kind: InMemoryChannel
 metadata:
@@ -51,3 +38,16 @@ spec:
       apiVersion: serving.knative.dev/v1
       kind: Service
       name: event-display
+
+---
+
+apiVersion: sources.eventing.zeiss.com/v1alpha1
+kind: SampleSource
+metadata:
+  name: samplesource-sample
+spec:
+  sink:
+    ref:
+      apiVersion: messaging.knative.dev/v1
+      kind: InMemoryChannel
+      name: samplechannel

@@ -60,6 +60,7 @@ func (a *Adapter) Start(ctx context.Context) error {
 		select {
 		case <-time.After(a.interval):
 			event := a.newEvent()
+
 			a.logger.Infow("Sending new event", zap.String("event", event.String()))
 			if result := a.client.Send(ctx, event); !cloudevents.IsACK(result) {
 				a.logger.Infow("failed to send event", zap.String("event", event.String()), zap.Error(result))

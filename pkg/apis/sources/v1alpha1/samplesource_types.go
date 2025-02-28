@@ -41,6 +41,13 @@ type SampleSource struct {
 	// Status communicates the observed state of the SampleSource (from the controller).
 	// +optional
 	Status SampleSourceStatus `json:"status,omitempty"`
+
+	// inherits duck/v1 SourceSpec, which currently provides:
+	// * Sink - a reference to an object that will resolve to a domain name or
+	//   a URI directly to use as the sink.
+	// * CloudEventOverrides - defines overrides to control the output format
+	//   and modifications of the event sent to the sink.
+	duckv1.SourceSpec `json:",inline"`
 }
 
 // GetGroupVersionKind returns the GroupVersionKind.

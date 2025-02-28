@@ -1419,9 +1419,6 @@ github.com/google/go-containerregistry/pkg/v1/stream
 github.com/google/go-containerregistry/pkg/v1/tarball
 github.com/google/go-containerregistry/pkg/v1/types
 github.com/google/go-containerregistry/pkg/v1/validate
-# github.com/google/go-github/v31 v31.0.0
-## explicit; go 1.13
-github.com/google/go-github/v31/github
 # github.com/google/go-github/v69 v69.0.0
 ## explicit; go 1.22.0
 github.com/google/go-github/v69/github
@@ -2551,9 +2548,7 @@ go.uber.org/zap/internal/color
 go.uber.org/zap/internal/exit
 go.uber.org/zap/internal/pool
 go.uber.org/zap/internal/stacktrace
-go.uber.org/zap/internal/ztest
 go.uber.org/zap/zapcore
-go.uber.org/zap/zaptest
 # gocloud.dev v0.40.0
 ## explicit; go 1.21.0
 gocloud.dev/aws
@@ -3335,7 +3330,6 @@ k8s.io/apimachinery/pkg/util/managedfields/internal
 k8s.io/apimachinery/pkg/util/mergepatch
 k8s.io/apimachinery/pkg/util/naming
 k8s.io/apimachinery/pkg/util/net
-k8s.io/apimachinery/pkg/util/rand
 k8s.io/apimachinery/pkg/util/runtime
 k8s.io/apimachinery/pkg/util/sets
 k8s.io/apimachinery/pkg/util/strategicpatch
@@ -3348,9 +3342,6 @@ k8s.io/apimachinery/pkg/version
 k8s.io/apimachinery/pkg/watch
 k8s.io/apimachinery/third_party/forked/golang/json
 k8s.io/apimachinery/third_party/forked/golang/reflect
-# k8s.io/apiserver v0.32.1
-## explicit; go 1.23.0
-k8s.io/apiserver/pkg/storage/names
 # k8s.io/client-go v0.32.2
 ## explicit; go 1.23.0
 k8s.io/client-go/applyconfigurations
@@ -3765,55 +3756,20 @@ k8s.io/utils/trace
 knative.dev/eventing/pkg/adapter/v2
 knative.dev/eventing/pkg/adapter/v2/util/crstatusevent
 knative.dev/eventing/pkg/apis
-knative.dev/eventing/pkg/apis/common/integration/v1alpha1
 knative.dev/eventing/pkg/apis/config
 knative.dev/eventing/pkg/apis/duck
 knative.dev/eventing/pkg/apis/duck/v1
 knative.dev/eventing/pkg/apis/eventing
 knative.dev/eventing/pkg/apis/eventing/v1
 knative.dev/eventing/pkg/apis/eventing/v1alpha1
-knative.dev/eventing/pkg/apis/eventing/v1beta1
-knative.dev/eventing/pkg/apis/eventing/v1beta2
-knative.dev/eventing/pkg/apis/eventing/v1beta3
 knative.dev/eventing/pkg/apis/feature
-knative.dev/eventing/pkg/apis/flows
-knative.dev/eventing/pkg/apis/flows/v1
 knative.dev/eventing/pkg/apis/messaging
 knative.dev/eventing/pkg/apis/messaging/config
 knative.dev/eventing/pkg/apis/messaging/v1
-knative.dev/eventing/pkg/apis/sinks
-knative.dev/eventing/pkg/apis/sinks/v1alpha1
 knative.dev/eventing/pkg/apis/sources
 knative.dev/eventing/pkg/apis/sources/config
 knative.dev/eventing/pkg/apis/sources/v1
-knative.dev/eventing/pkg/apis/sources/v1alpha1
-knative.dev/eventing/pkg/apis/sources/v1beta2
 knative.dev/eventing/pkg/auth
-knative.dev/eventing/pkg/client/clientset/versioned
-knative.dev/eventing/pkg/client/clientset/versioned/fake
-knative.dev/eventing/pkg/client/clientset/versioned/scheme
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1alpha1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1alpha1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1beta1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1beta1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1beta2
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1beta2/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1beta3
-knative.dev/eventing/pkg/client/clientset/versioned/typed/eventing/v1beta3/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/flows/v1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/flows/v1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/messaging/v1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/messaging/v1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sinks/v1alpha1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sinks/v1alpha1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sources/v1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sources/v1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sources/v1alpha1
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sources/v1alpha1/fake
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sources/v1beta2
-knative.dev/eventing/pkg/client/clientset/versioned/typed/sources/v1beta2/fake
 knative.dev/eventing/pkg/client/listers/eventing/v1alpha1
 knative.dev/eventing/pkg/crossnamespace
 knative.dev/eventing/pkg/eventfilter
@@ -3825,20 +3781,6 @@ knative.dev/eventing/pkg/metrics/source
 knative.dev/eventing/pkg/observability
 knative.dev/eventing/pkg/observability/client
 knative.dev/eventing/pkg/reconciler/source
-# knative.dev/eventing-github v0.44.0
-## explicit; go 1.22.7
-knative.dev/eventing-github/github
-knative.dev/eventing-github/pkg/apis/bindings
-knative.dev/eventing-github/pkg/apis/bindings/v1alpha1
-knative.dev/eventing-github/pkg/apis/sources/v1alpha1
-knative.dev/eventing-github/pkg/client/clientset/versioned
-knative.dev/eventing-github/pkg/client/clientset/versioned/fake
-knative.dev/eventing-github/pkg/client/clientset/versioned/scheme
-knative.dev/eventing-github/pkg/client/clientset/versioned/typed/bindings/v1alpha1
-knative.dev/eventing-github/pkg/client/clientset/versioned/typed/bindings/v1alpha1/fake
-knative.dev/eventing-github/pkg/client/clientset/versioned/typed/sources/v1alpha1
-knative.dev/eventing-github/pkg/client/clientset/versioned/typed/sources/v1alpha1/fake
-knative.dev/eventing-github/pkg/client/listers/sources/v1alpha1
 # knative.dev/hack v0.0.0-20250217122557-ce4c934f30e5
 ## explicit; go 1.21
 knative.dev/hack
@@ -3853,7 +3795,6 @@ knative.dev/pkg/apis
 knative.dev/pkg/apis/duck
 knative.dev/pkg/apis/duck/ducktypes
 knative.dev/pkg/apis/duck/v1
-knative.dev/pkg/apis/duck/v1alpha1
 knative.dev/pkg/apis/duck/v1beta1
 knative.dev/pkg/changeset
 knative.dev/pkg/client/injection/ducks/duck/v1/addressable
@@ -3891,7 +3832,6 @@ knative.dev/pkg/kmp
 knative.dev/pkg/leaderelection
 knative.dev/pkg/logging
 knative.dev/pkg/logging/logkey
-knative.dev/pkg/logging/testing
 knative.dev/pkg/metrics
 knative.dev/pkg/metrics/metricskey
 knative.dev/pkg/network
@@ -3899,11 +3839,9 @@ knative.dev/pkg/network/handlers
 knative.dev/pkg/profiling
 knative.dev/pkg/ptr
 knative.dev/pkg/reconciler
-knative.dev/pkg/reconciler/testing
 knative.dev/pkg/resolver
 knative.dev/pkg/signals
 knative.dev/pkg/system
-knative.dev/pkg/system/testing
 knative.dev/pkg/tracing
 knative.dev/pkg/tracing/config
 knative.dev/pkg/tracing/propagation

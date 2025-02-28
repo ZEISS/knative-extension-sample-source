@@ -16,7 +16,6 @@ require (
 	k8s.io/apimachinery v0.32.2
 	k8s.io/client-go v0.32.2
 	knative.dev/eventing v0.44.1-0.20250218063550-9a7c6d5633c5
-	knative.dev/eventing-github v0.44.0
 	knative.dev/hack v0.0.0-20250217122557-ce4c934f30e5
 	knative.dev/pkg v0.0.0-20250218011850-c925de2a3f07
 	knative.dev/serving v0.44.1-0.20250218133651-6da3d87e4d86
@@ -254,7 +253,6 @@ require (
 	github.com/golangci/unconvert v0.0.0-20240309020433-c5143eacb3ed // indirect
 	github.com/google/gnostic-models v0.6.9 // indirect
 	github.com/google/go-containerregistry v0.20.3 // indirect
-	github.com/google/go-github/v31 v31.0.0 // indirect
 	github.com/google/go-github/v69 v69.0.0 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
@@ -512,7 +510,6 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	honnef.co/go/tools v0.6.0 // indirect
 	k8s.io/apiextensions-apiserver v0.32.1 // indirect
-	k8s.io/apiserver v0.32.1 // indirect
 	k8s.io/code-generator v0.32.2 // indirect
 	k8s.io/gengo/v2 v2.0.0-20240911193312-2b36238f13e9 // indirect
 	k8s.io/klog/v2 v2.130.1 // indirect
