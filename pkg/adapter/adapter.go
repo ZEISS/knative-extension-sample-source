@@ -39,7 +39,7 @@ type dataExample struct {
 
 func (a *Adapter) newEvent() cloudevents.Event {
 	event := cloudevents.NewEvent()
-	event.SetType("dev.knative.sample")
+	event.SetType("com.zeiss.eventing.sources.sample")
 	event.SetSource("sample.knative.dev/heartbeat-source")
 
 	if err := event.SetData(cloudevents.ApplicationJSON, &dataExample{
@@ -61,7 +61,7 @@ func (a *Adapter) Start(ctx context.Context) error {
 		case <-time.After(a.interval):
 			event := a.newEvent()
 			a.logger.Infow("Sending new event", zap.String("event", event.String()))
-			if result := a.client.Send(context.Background(), event); !cloudevents.IsACK(result) {
+			if result := a.client.Send(ctx, event); !cloudevents.IsACK(result) {
 				a.logger.Infow("failed to send event", zap.String("event", event.String()), zap.Error(result))
 				// We got an error but it could be transient, try again next interval.
 				continue
@@ -77,6 +77,7 @@ func NewAdapter(ctx context.Context, aEnv adapter.EnvConfigAccessor, ceClient cl
 	env := aEnv.(*envConfig) // Will always be our own envConfig type
 	logger := logging.FromContext(ctx)
 	logger.Infow("Heartbeat example", zap.Duration("interval", env.Interval))
+
 	return &Adapter{
 		interval: env.Interval,
 		client:   ceClient,
