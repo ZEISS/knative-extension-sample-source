@@ -22,10 +22,10 @@ import (
 	context "context"
 	time "time"
 
-	apissourcesv1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
-	versioned "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned"
-	internalinterfaces "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/internalinterfaces"
-	sourcesv1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/listers/sources/v1alpha1"
+	apissourcesv1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
+	versioned "github.com/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned"
+	internalinterfaces "github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/internalinterfaces"
+	sourcesv1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/client/listers/sources/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -62,13 +62,13 @@ func NewFilteredSampleSourceInformer(client versioned.Interface, namespace strin
 				if tweakListOptions != nil {
 					tweakListOptions(&options)
 				}
-				return client.SourcesV1alpha1().SampleSources(namespace).List(context.TODO(), options)
+				return client.SamplesV1alpha1().SampleSources(namespace).List(context.TODO(), options)
 			},
 			WatchFunc: func(options v1.ListOptions) (watch.Interface, error) {
 				if tweakListOptions != nil {
 					tweakListOptions(&options)
 				}
-				return client.SourcesV1alpha1().SampleSources(namespace).Watch(context.TODO(), options)
+				return client.SamplesV1alpha1().SampleSources(namespace).Watch(context.TODO(), options)
 			},
 		},
 		&apissourcesv1alpha1.SampleSource{},

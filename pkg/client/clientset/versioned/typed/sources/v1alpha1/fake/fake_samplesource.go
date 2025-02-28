@@ -19,18 +19,18 @@ limitations under the License.
 package fake
 
 import (
-	v1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
-	sourcesv1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/typed/sources/v1alpha1"
+	v1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
+	sourcesv1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/typed/sources/v1alpha1"
 	gentype "k8s.io/client-go/gentype"
 )
 
 // fakeSampleSources implements SampleSourceInterface
 type fakeSampleSources struct {
 	*gentype.FakeClientWithList[*v1alpha1.SampleSource, *v1alpha1.SampleSourceList]
-	Fake *FakeSourcesV1alpha1
+	Fake *FakeSamplesV1alpha1
 }
 
-func newFakeSampleSources(fake *FakeSourcesV1alpha1, namespace string) sourcesv1alpha1.SampleSourceInterface {
+func newFakeSampleSources(fake *FakeSamplesV1alpha1, namespace string) sourcesv1alpha1.SampleSourceInterface {
 	return &fakeSampleSources{
 		gentype.NewFakeClientWithList[*v1alpha1.SampleSource, *v1alpha1.SampleSourceList](
 			fake.Fake,

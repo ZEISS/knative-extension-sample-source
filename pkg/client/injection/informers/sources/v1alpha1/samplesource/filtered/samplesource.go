@@ -21,8 +21,8 @@ package filtered
 import (
 	context "context"
 
-	v1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1"
-	filtered "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory/filtered"
+	v1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1"
+	filtered "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory/filtered"
 	controller "knative.dev/pkg/controller"
 	injection "knative.dev/pkg/injection"
 	logging "knative.dev/pkg/logging"
@@ -47,7 +47,7 @@ func withInformer(ctx context.Context) (context.Context, []controller.Informer) 
 	infs := []controller.Informer{}
 	for _, selector := range labelSelectors {
 		f := filtered.Get(ctx, selector)
-		inf := f.Sources().V1alpha1().SampleSources()
+		inf := f.Samples().V1alpha1().SampleSources()
 		ctx = context.WithValue(ctx, Key{Selector: selector}, inf)
 		infs = append(infs, inf.Informer())
 	}
@@ -59,7 +59,7 @@ func Get(ctx context.Context, selector string) v1alpha1.SampleSourceInformer {
 	untyped := ctx.Value(Key{Selector: selector})
 	if untyped == nil {
 		logging.FromContext(ctx).Panicf(
-			"Unable to fetch github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1.SampleSourceInformer with selector %s from context.", selector)
+			"Unable to fetch github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1.SampleSourceInformer with selector %s from context.", selector)
 	}
 	return untyped.(v1alpha1.SampleSourceInformer)
 }

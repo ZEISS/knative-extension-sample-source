@@ -21,8 +21,8 @@ package v1alpha1
 import (
 	context "context"
 
-	sourcesv1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
-	scheme "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/scheme"
+	sourcesv1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
+	scheme "github.com/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -56,7 +56,7 @@ type sampleSources struct {
 }
 
 // newSampleSources returns a SampleSources
-func newSampleSources(c *SourcesV1alpha1Client, namespace string) *sampleSources {
+func newSampleSources(c *SamplesV1alpha1Client, namespace string) *sampleSources {
 	return &sampleSources{
 		gentype.NewClientWithList[*sourcesv1alpha1.SampleSource, *sourcesv1alpha1.SampleSourceList](
 			"samplesources",

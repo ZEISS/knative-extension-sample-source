@@ -21,8 +21,8 @@ package samplesource
 import (
 	context "context"
 
-	v1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1"
-	factory "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory"
+	v1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1"
+	factory "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory"
 	controller "knative.dev/pkg/controller"
 	injection "knative.dev/pkg/injection"
 	logging "knative.dev/pkg/logging"
@@ -37,7 +37,7 @@ type Key struct{}
 
 func withInformer(ctx context.Context) (context.Context, controller.Informer) {
 	f := factory.Get(ctx)
-	inf := f.Sources().V1alpha1().SampleSources()
+	inf := f.Samples().V1alpha1().SampleSources()
 	return context.WithValue(ctx, Key{}, inf), inf.Informer()
 }
 
@@ -46,7 +46,7 @@ func Get(ctx context.Context) v1alpha1.SampleSourceInformer {
 	untyped := ctx.Value(Key{})
 	if untyped == nil {
 		logging.FromContext(ctx).Panic(
-			"Unable to fetch github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1.SampleSourceInformer from context.")
+			"Unable to fetch github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1.SampleSourceInformer from context.")
 	}
 	return untyped.(v1alpha1.SampleSourceInformer)
 }

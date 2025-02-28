@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/zeiss/zeiss/knative-extension-sample-source/pkg/reconciler/sample"
+	"github.com/zeiss/knative-extension-sample-source/pkg/reconciler/sample"
 	"knative.dev/pkg/injection/sharedmain"
 )
 

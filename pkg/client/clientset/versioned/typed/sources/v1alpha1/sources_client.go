@@ -21,29 +21,29 @@ package v1alpha1
 import (
 	http "net/http"
 
-	sourcesv1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
-	scheme "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/scheme"
+	sourcesv1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
+	scheme "github.com/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
 )
 
-type SourcesV1alpha1Interface interface {
+type SamplesV1alpha1Interface interface {
 	RESTClient() rest.Interface
 	SampleSourcesGetter
 }
 
-// SourcesV1alpha1Client is used to interact with features provided by the sources.eventing.zeiss.com group.
-type SourcesV1alpha1Client struct {
+// SamplesV1alpha1Client is used to interact with features provided by the samples.knative.dev group.
+type SamplesV1alpha1Client struct {
 	restClient rest.Interface
 }
 
-func (c *SourcesV1alpha1Client) SampleSources(namespace string) SampleSourceInterface {
+func (c *SamplesV1alpha1Client) SampleSources(namespace string) SampleSourceInterface {
 	return newSampleSources(c, namespace)
 }
 
-// NewForConfig creates a new SourcesV1alpha1Client for the given config.
+// NewForConfig creates a new SamplesV1alpha1Client for the given config.
 // NewForConfig is equivalent to NewForConfigAndClient(c, httpClient),
 // where httpClient was generated with rest.HTTPClientFor(c).
-func NewForConfig(c *rest.Config) (*SourcesV1alpha1Client, error) {
+func NewForConfig(c *rest.Config) (*SamplesV1alpha1Client, error) {
 	config := *c
 	if err := setConfigDefaults(&config); err != nil {
 		return nil, err
@@ -55,9 +55,9 @@ func NewForConfig(c *rest.Config) (*SourcesV1alpha1Client, error) {
 	return NewForConfigAndClient(&config, httpClient)
 }
 
-// NewForConfigAndClient creates a new SourcesV1alpha1Client for the given config and http client.
+// NewForConfigAndClient creates a new SamplesV1alpha1Client for the given config and http client.
 // Note the http client provided takes precedence over the configured transport values.
-func NewForConfigAndClient(c *rest.Config, h *http.Client) (*SourcesV1alpha1Client, error) {
+func NewForConfigAndClient(c *rest.Config, h *http.Client) (*SamplesV1alpha1Client, error) {
 	config := *c
 	if err := setConfigDefaults(&config); err != nil {
 		return nil, err
@@ -66,12 +66,12 @@ func NewForConfigAndClient(c *rest.Config, h *http.Client) (*SourcesV1alpha1Clie
 	if err != nil {
 		return nil, err
 	}
-	return &SourcesV1alpha1Client{client}, nil
+	return &SamplesV1alpha1Client{client}, nil
 }
 
-// NewForConfigOrDie creates a new SourcesV1alpha1Client for the given config and
+// NewForConfigOrDie creates a new SamplesV1alpha1Client for the given config and
 // panics if there is an error in the config.
-func NewForConfigOrDie(c *rest.Config) *SourcesV1alpha1Client {
+func NewForConfigOrDie(c *rest.Config) *SamplesV1alpha1Client {
 	client, err := NewForConfig(c)
 	if err != nil {
 		panic(err)
@@ -79,9 +79,9 @@ func NewForConfigOrDie(c *rest.Config) *SourcesV1alpha1Client {
 	return client
 }
 
-// New creates a new SourcesV1alpha1Client for the given RESTClient.
-func New(c rest.Interface) *SourcesV1alpha1Client {
-	return &SourcesV1alpha1Client{c}
+// New creates a new SamplesV1alpha1Client for the given RESTClient.
+func New(c rest.Interface) *SamplesV1alpha1Client {
+	return &SamplesV1alpha1Client{c}
 }
 
 func setConfigDefaults(config *rest.Config) error {
@@ -99,7 +99,7 @@ func setConfigDefaults(config *rest.Config) error {
 
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
-func (c *SourcesV1alpha1Client) RESTClient() rest.Interface {
+func (c *SamplesV1alpha1Client) RESTClient() rest.Interface {
 	if c == nil {
 		return nil
 	}

@@ -21,9 +21,9 @@ package fake
 import (
 	context "context"
 
-	externalversions "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions"
-	fake "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/client/fake"
-	factory "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory"
+	externalversions "github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions"
+	fake "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/client/fake"
+	factory "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory"
 	controller "knative.dev/pkg/controller"
 	injection "knative.dev/pkg/injection"
 )

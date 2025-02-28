@@ -4,7 +4,7 @@ import (
 	"knative.dev/eventing/pkg/adapter/v2"
 	"knative.dev/pkg/signals"
 
-	sampleadapter "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter"
+	sampleadapter "github.com/zeiss/knative-extension-sample-source/pkg/adapter"
 )
 
 func main() {

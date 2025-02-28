@@ -1,6 +1,6 @@
 package apis
 
-import "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
+import "github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back

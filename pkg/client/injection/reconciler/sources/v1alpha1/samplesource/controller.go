@@ -24,9 +24,9 @@ import (
 	reflect "reflect"
 	strings "strings"
 
-	versionedscheme "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/scheme"
-	client "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/client"
-	samplesource "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/samplesource"
+	versionedscheme "github.com/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/scheme"
+	client "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/client"
+	samplesource "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/samplesource"
 	zap "go.uber.org/zap"
 	corev1 "k8s.io/api/core/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
@@ -44,7 +44,7 @@ import (
 
 const (
 	defaultControllerAgentName = "samplesource-controller"
-	defaultFinalizerName       = "samplesources.sources.eventing.zeiss.com"
+	defaultFinalizerName       = "samplesources.samples.knative.dev"
 )
 
 // NewImpl returns a controller.Impl that handles queuing and feeding work from
@@ -103,7 +103,7 @@ func NewImpl(ctx context.Context, r Interface, optionsFns ...controller.OptionsF
 
 	logger = logger.With(
 		zap.String(logkey.ControllerType, ctrTypeName),
-		zap.String(logkey.Kind, "sources.eventing.zeiss.com.SampleSource"),
+		zap.String(logkey.Kind, "samples.knative.dev.SampleSource"),
 	)
 
 	impl := controller.NewContext(ctx, rec, controller.ControllerOptions{WorkQueueName: ctrTypeName, Logger: logger})

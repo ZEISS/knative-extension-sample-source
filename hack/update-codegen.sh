@@ -35,7 +35,7 @@ kube::codegen::gen_helpers \
 kube::codegen::gen_client \
   --boilerplate "${REPO_ROOT_DIR}/hack/boilerplate.go.txt" \
   --output-dir "${REPO_ROOT_DIR}/pkg/client" \
-  --output-pkg "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client" \
+  --output-pkg "github.com/zeiss/knative-extension-sample-source/pkg/client" \
   --with-watch \
   "${REPO_ROOT_DIR}/pkg/apis"
 
@@ -43,7 +43,7 @@ group "Knative Codegen"
 
 # Knative Injection
 ${KNATIVE_CODEGEN_PKG}/hack/generate-knative.sh "injection" \
-"github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client" "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis" \
+"github.com/zeiss/knative-extension-sample-source/pkg/client" "github.com/zeiss/knative-extension-sample-source/pkg/apis" \
 "sources:v1alpha1" \
 --go-header-file ${REPO_ROOT_DIR}/hack/boilerplate.go.txt
 

@@ -23,9 +23,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned"
-	internalinterfaces "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/internalinterfaces"
-	sources "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources"
+	versioned "github.com/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned"
+	internalinterfaces "github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/internalinterfaces"
+	sources "github.com/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
@@ -254,9 +254,9 @@ type SharedInformerFactory interface {
 	// client.
 	InformerFor(obj runtime.Object, newFunc internalinterfaces.NewInformerFunc) cache.SharedIndexInformer
 
-	Sources() sources.Interface
+	Samples() sources.Interface
 }
 
-func (f *sharedInformerFactory) Sources() sources.Interface {
+func (f *sharedInformerFactory) Samples() sources.Interface {
 	return sources.New(f, f.namespace, f.tweakListOptions)
 }

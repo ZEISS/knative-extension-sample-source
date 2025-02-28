@@ -21,8 +21,8 @@ package fake
 import (
 	context "context"
 
-	fake "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory/fake"
-	samplesource "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/samplesource"
+	fake "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory/fake"
+	samplesource "github.com/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/samplesource"
 	controller "knative.dev/pkg/controller"
 	injection "knative.dev/pkg/injection"
 )
@@ -35,6 +35,6 @@ func init() {
 
 func withInformer(ctx context.Context) (context.Context, controller.Informer) {
 	f := fake.Get(ctx)
-	inf := f.Sources().V1alpha1().SampleSources()
+	inf := f.Samples().V1alpha1().SampleSources()
 	return context.WithValue(ctx, samplesource.Key{}, inf), inf.Informer()
 }

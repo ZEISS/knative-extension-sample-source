@@ -23,9 +23,9 @@ import (
 	json "encoding/json"
 	fmt "fmt"
 
-	v1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
-	versioned "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned"
-	sourcesv1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/listers/sources/v1alpha1"
+	v1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
+	versioned "github.com/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned"
+	sourcesv1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/client/listers/sources/v1alpha1"
 	zap "go.uber.org/zap"
 	zapcore "go.uber.org/zap/zapcore"
 	v1 "k8s.io/api/core/v1"
@@ -315,7 +315,7 @@ func (r *reconcilerImpl) updateStatus(ctx context.Context, logger *zap.SugaredLo
 		// The first iteration tries to use the injectionInformer's state, subsequent attempts fetch the latest state via API.
 		if attempts > 0 {
 
-			getter := r.Client.SourcesV1alpha1().SampleSources(desired.Namespace)
+			getter := r.Client.SamplesV1alpha1().SampleSources(desired.Namespace)
 
 			existing, err = getter.Get(ctx, desired.Name, metav1.GetOptions{})
 			if err != nil {
@@ -336,7 +336,7 @@ func (r *reconcilerImpl) updateStatus(ctx context.Context, logger *zap.SugaredLo
 
 		existing.Status = desired.Status
 
-		updater := r.Client.SourcesV1alpha1().SampleSources(existing.Namespace)
+		updater := r.Client.SamplesV1alpha1().SampleSources(existing.Namespace)
 
 		_, err = updater.UpdateStatus(ctx, existing, metav1.UpdateOptions{})
 		return err
@@ -384,7 +384,7 @@ func (r *reconcilerImpl) updateFinalizersFiltered(ctx context.Context, resource 
 		return resource, err
 	}
 
-	patcher := r.Client.SourcesV1alpha1().SampleSources(resource.Namespace)
+	patcher := r.Client.SamplesV1alpha1().SampleSources(resource.Namespace)
 
 	resourceName := resource.Name
 	updated, err := patcher.Patch(ctx, resourceName, types.MergePatchType, patch, metav1.PatchOptions{})

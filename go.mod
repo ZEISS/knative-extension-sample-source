@@ -1,4 +1,4 @@
-module github.com/zeiss/zeiss/knative-extension-sample-source
+module github.com/zeiss/knative-extension-sample-source
 
 go 1.23.4
 

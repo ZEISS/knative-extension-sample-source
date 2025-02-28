@@ -2,9 +2,8 @@ package main
 
 import (
 	"context"
-	"os"
 
-	sourcev1alpha1 "github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
+	sourcev1alpha1 "github.com/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"knative.dev/pkg/configmap"
 	"knative.dev/pkg/controller"
@@ -12,7 +11,6 @@ import (
 	"knative.dev/pkg/signals"
 	"knative.dev/pkg/webhook"
 	"knative.dev/pkg/webhook/certificates"
-	"knative.dev/pkg/webhook/psbinding"
 	"knative.dev/pkg/webhook/resourcesemantics"
 	"knative.dev/pkg/webhook/resourcesemantics/defaulting"
 	"knative.dev/pkg/webhook/resourcesemantics/validation"
@@ -76,11 +74,6 @@ func main() {
 		Port:        8443,
 		SecretName:  "sample-webhook-certs",
 	})
-
-	sampleSelector := psbinding.WithSelector(psbinding.ExclusionSelector)
-	if os.Getenv("SAMPLE_BINDING_SELECTION_MODE") == "inclusion" {
-		sampleSelector = psbinding.WithSelector(psbinding.InclusionSelector)
-	}
 
 	sharedmain.WebhookMainWithContext(ctx, webhook.NameFromEnv(),
 		certificates.NewController,
