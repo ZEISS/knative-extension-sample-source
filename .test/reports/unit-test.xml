@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="138" failures="0" errors="0" time="9.881755">
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/cmd/controller" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/cmd/mt_receive_adapter" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/cmd/receive_adapter" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/cmd/webhook" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/zeiss/zeiss/knative-extension-sample-source/config" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/zeiss/zeiss/knative-extension-sample-source/config/core" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/zeiss/zeiss/knative-extension-sample-source/config/mt-github" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/github" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="36" failures="0" time="2.245000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestGracefulShutdown" time="1.010000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_check_suite" time="0.010000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_commit_comment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_create" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_delete" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_deployment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_deployment_status" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_fork" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_gollum" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_installation" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_integration_installation" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_issue_comment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_issues" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_label" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_member" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_membership" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_milestone" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_organization" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_org_block" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_page_build" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_ping" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_project_card" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_project_column" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_project" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_public" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_pull_request" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_pull_request_review" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_pull_request_review_comment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_push" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_release" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_repository" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_status" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_team" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_team_add" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer/valid_watch" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/adapter" name="TestServer" time="0.090000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.024000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="27" failures="0" time="1.077000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingDefaulting/namespace_is_defaulted" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingDefaulting/no_ref,_given_namespace" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingDefaulting" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingGetGroupVersionKind" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingGetters" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingSetObsGen" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingStatusIsReady/uninitialized" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingStatusIsReady/initialized" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingStatusIsReady/mark_available" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingStatusIsReady/mark_available#01" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingStatusIsReady" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingUndo/nothing_to_remove" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingUndo/lots_to_remove" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingUndo" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingDo/nothing_to_add" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingDo/fix_the_key" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingDo/lots_to_add" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingDo" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBinding_GetGroupVersionKind" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingValidation/missing_subject_namespace" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingValidation/invalid_subject_namespace" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingValidation/missing_secret_information" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingValidation/missing_secret_body_information" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestGitHubBindingValidation" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestResource" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestKind" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/bindings/v1alpha1" name="TestKnownTypes" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="32" failures="0" time="1.076000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGithubSourceDefaults/nil_spec" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGithubSourceDefaults" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceGetConditionSet" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceGetStatus" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/uninitialized" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/initialized" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_sink" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_secrets" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_sink,_secrets,_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_sink,_secrets,_webhook,_then_no_sink" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_sink,_secrets,_webhook,_then_no_secrets" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_sink,_secrets,_webhook,_then_no_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_sink_nil,_secrets,_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady/mark_sink_nil,_secrets,_webhook,_then_sink" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusIsReady" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/uninitialized" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/initialized" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_sink" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_secrets" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_sink,_secrets,_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_sink,_secrets,_webhook,_then_no_sink" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_sink,_secrets,_webhook,_then_no_secrets" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_sink,_secrets,_webhook,_then_no_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_sink_nil,_secrets,_webhook" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition/mark_sink_nil,_secrets,_webhook,_then_sink" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceStatusGetCondition" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSource_GetGroupVersionKind" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceValidation/empty_sink" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestGitHubSourceValidation" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/apis/sources/v1alpha1" name="TestRegisterHelpers" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.043000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.017000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.025000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/scheme" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.025000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/typed/bindings/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.013000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/typed/bindings/v1alpha1/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/typed/sources/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.006000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/clientset/versioned/typed/sources/v1alpha1/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.004000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/bindings" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.007000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/bindings/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/internalinterfaces" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/informers/externalversions/sources/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/client" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/client/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.004000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/bindings/v1alpha1/githubbinding" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.004000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/bindings/v1alpha1/githubbinding/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/bindings/v1alpha1/githubbinding/filtered" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/bindings/v1alpha1/githubbinding/filtered/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.004000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.004000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.008000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory/filtered" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/factory/filtered/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.004000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/githubsource" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.002000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/githubsource/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/githubsource/filtered" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.012000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/informers/sources/v1alpha1/githubsource/filtered/fake" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/injection/reconciler/sources/v1alpha1/githubsource" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/listers/bindings/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.005000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/client/listers/sources/v1alpha1" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.003000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/common" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="41" failures="0" time="2.153000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestGracefulShutdown" time="1.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_check_suite" time="0.010000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_commit_comment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_create" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_delete" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_deployment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_deployment_status" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_fork" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_gollum" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_installation" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_integration_installation" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_issue_comment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_issues" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_label" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_member" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_membership" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_milestone" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_organization" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_org_block" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_page_build" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_ping" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_project_card" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_project_column" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_project" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_public" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_pull_request" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_pull_request_review" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_pull_request_review_comment" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_push" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_release" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_repository" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_status" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_team" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_team_add" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer/valid_watch" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestServer" time="0.070000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestNew" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestGitHubSource/resource_not_ready_valid" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestGitHubSource/secret_ref_missing" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestGitHubSource/valid" time="0.000000"></testcase>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter" name="TestGitHubSource" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="1.077000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter/router" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/mtadapter/router" name="TestGitHubServer" time="0.010000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.006000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/reconciler/binding" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="1" failures="0" time="1.057000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/reconciler/source" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+		<testcase classname="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/reconciler/source" name="TestNewFakeWebhookClient" time="0.000000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.006000" name="github.com/zeiss/zeiss/knative-extension-sample-source/pkg/reconciler/source/resources" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.004000" name="github.com/zeiss/zeiss/knative-extension-sample-source/test/lib" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.006000" name="github.com/zeiss/zeiss/knative-extension-sample-source/test/lib/resources" timestamp="2025-02-28T09:55:56Z">
+		<properties>
+			<property name="go.version" value="go1.24.0 linux/arm64"></property>
+		</properties>
+	</testsuite>
+</testsuites>

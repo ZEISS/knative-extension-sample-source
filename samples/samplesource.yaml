@@ -1,0 +1,53 @@
+apiVersion: sources.knative.dev/v1alpha1
+kind: SampleSource
+metadata:
+  name: samplesource-sample
+spec:
+  sink:
+    ref:
+      apiVersion: messaging.knative.dev/v1
+      kind: InMemoryChannel
+      name: samplechannel
+
+---
+
+apiVersion: messaging.knative.dev/v1
+kind: InMemoryChannel
+metadata:
+  name: githubchannel
+
+---
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: event-display
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/min-scale: "1"
+    spec:
+      containers:
+        - name: display
+          image: gcr.io/knative-releases/knative.dev/eventing/cmd/event_display
+          ports:
+            - containerPort: 8080
+
+---
+
+apiVersion: messaging.knative.dev/v1
+kind: Subscription
+metadata:
+  name: subscription
+  namespace: default
+spec:
+  channel:
+    apiVersion: messaging.knative.dev/v1
+    kind: InMemoryChannel
+    name: samplechannel
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: event-display
