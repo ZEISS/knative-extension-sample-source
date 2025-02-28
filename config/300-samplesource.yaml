@@ -12,7 +12,7 @@ metadata:
       ]
   name: samplesources.sources.eventing.zeiss.com
 spec:
-  group: sources.eventing.zeiss.com
+  group: ssources.eventing.zeiss.com
   versions:
     - &version
       name: v1alpha1

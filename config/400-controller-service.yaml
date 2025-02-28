@@ -5,7 +5,7 @@ metadata:
     sources.eventing.zeiss.com/release: devel
     control-plane: sample-source-controller-manager
   name: sample-source-controller-manager
-  namespace: sources-samples
+  namespace: knative-samples
 spec:
   selector:
     control-plane: sample-source-controller-manager

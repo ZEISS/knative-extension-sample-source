@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright 2019 The Knative Authors
+# Copyright 2018 The Knative Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,6 +18,6 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-source $(dirname "$0")/../vendor/knative.dev/hack/library.sh
+source $(dirname $0)/../vendor/knative.dev/hack/library.sh
 
 go_update_deps "$@"

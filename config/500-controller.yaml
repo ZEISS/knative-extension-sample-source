@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sample-source-controller
-  namespace: sources-samples
+  namespace: knative-samples
   labels:
     sources.eventing.zeiss.com/release: devel
 spec:

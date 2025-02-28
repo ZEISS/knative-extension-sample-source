@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright 2019 The Knative Authors
+# Copyright 2018 The Knative Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,14 +22,9 @@
 # to run a specific set of tests.
 
 export GO111MODULE=on
-
-# Markdown linting failures don't show up properly in Gubernator resulting
-# in a net-negative contributor experience.
 export DISABLE_MD_LINTING=1
 
 source $(dirname $0)/../vendor/knative.dev/hack/presubmit-tests.sh
-
-# TODO(mattmoor): integration tests
 
 # We use the default build, unit and integration test runners.
 

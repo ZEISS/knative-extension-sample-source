@@ -48,14 +48,12 @@ rules:
   - patch
 
 - apiGroups:
-  - ""
   - serving.knative.dev
   resources:
   - services
   verbs:
   - get
   - list
-  - watch
 
 - apiGroups:
   - ""
@@ -86,7 +84,7 @@ metadata:
     duck.knative.dev/source: "true"
 rules:
   - apiGroups:
-      - "sources.eventing.knative.dev"
+      - "sources.eventing.zeiss.com"
     resources:
       - "samplesources"
     verbs:
