@@ -1,7 +1,7 @@
 apiVersion: messaging.knative.dev/v1
 kind: InMemoryChannel
 metadata:
-  name: githubchannel
+  name: samplechannel
 
 ---
 apiVersion: serving.knative.dev/v1

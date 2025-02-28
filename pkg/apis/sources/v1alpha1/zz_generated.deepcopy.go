@@ -32,7 +32,6 @@ func (in *SampleSource) DeepCopyInto(out *SampleSource) {
 	in.ObjectMeta.DeepCopyInto(&out.ObjectMeta)
 	in.Spec.DeepCopyInto(&out.Spec)
 	in.Status.DeepCopyInto(&out.Status)
-	in.SourceSpec.DeepCopyInto(&out.SourceSpec)
 	return
 }
 

@@ -51,6 +51,7 @@ func (r *Reconciler) ReconcileKind(ctx context.Context, src *v1alpha1.SampleSour
 	if ra != nil {
 		src.Status.PropagateDeploymentAvailability(ra)
 	}
+
 	if sb != nil {
 		if c := sb.Status.GetCondition(sourcesv1.SinkBindingConditionSinkProvided); c.IsTrue() {
 			src.Status.MarkSink(sb.Status.SinkURI)
@@ -58,6 +59,7 @@ func (r *Reconciler) ReconcileKind(ctx context.Context, src *v1alpha1.SampleSour
 			src.Status.MarkNoSink(c.GetReason(), "%s", c.GetMessage())
 		}
 	}
+
 	if event != nil {
 		logging.FromContext(ctx).Infof("returning because event from ReconcileDeployment")
 		return event
