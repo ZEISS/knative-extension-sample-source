@@ -2570,8 +2570,8 @@ gocloud.dev/secrets/awskms
 gocloud.dev/secrets/azurekeyvault
 gocloud.dev/secrets/driver
 gocloud.dev/secrets/gcpkms
-# golang.org/x/crypto v0.33.0
-## explicit; go 1.20
+# golang.org/x/crypto v0.35.0
+## explicit; go 1.23.0
 golang.org/x/crypto/argon2
 golang.org/x/crypto/bcrypt
 golang.org/x/crypto/blake2b
