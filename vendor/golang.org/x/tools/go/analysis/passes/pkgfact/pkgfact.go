@@ -41,7 +41,7 @@ var Analyzer = &analysis.Analyzer{
 	URL:        "https://pkg.go.dev/golang.org/x/tools/go/analysis/passes/pkgfact",
 	Run:        run,
 	FactTypes:  []analysis.Fact{new(pairsFact)},
-	ResultType: reflect.TypeOf(map[string]string{}),
+	ResultType: reflect.TypeFor[map[string]string](),
 }
 
 // A pairsFact is a package-level fact that records
@@ -53,7 +53,7 @@ type pairsFact []string
 func (f *pairsFact) AFact()         {}
 func (f *pairsFact) String() string { return "pairs(" + strings.Join(*f, ", ") + ")" }
 
-func run(pass *analysis.Pass) (interface{}, error) {
+func run(pass *analysis.Pass) (any, error) {
 	result := make(map[string]string)
 
 	// At each import, print the fact from the imported
