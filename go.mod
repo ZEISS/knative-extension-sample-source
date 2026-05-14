@@ -1,6 +1,6 @@
 module github.com/zeiss/knative-extension-sample-source
 
-go 1.23.4
+go 1.25
 
 require (
 	github.com/cloudevents/sdk-go/v2 v2.15.2
@@ -9,7 +9,7 @@ require (
 	github.com/google/ko v0.17.1
 	github.com/goreleaser/goreleaser/v2 v2.7.0
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 	go.uber.org/zap v1.27.0
 	gotest.tools/gotestsum v1.12.0
 	k8s.io/api v0.32.2
@@ -421,7 +421,7 @@ require (
 	github.com/sivchari/containedctx v1.0.3 // indirect
 	github.com/sivchari/tenv v1.12.1 // indirect
 	github.com/skeema/knownhosts v1.3.0 // indirect
-	github.com/slack-go/slack v0.15.0 // indirect
+	github.com/slack-go/slack v0.23.1 // indirect
 	github.com/sonatard/noctx v0.1.0 // indirect
 	github.com/sourcegraph/conc v0.3.0 // indirect
 	github.com/sourcegraph/go-diff v0.7.0 // indirect
