@@ -27,7 +27,7 @@ type InstrumentKind uint8
 const (
 	// instrumentKindUndefined is an undefined instrument kind, it should not
 	// be used by any initialized type.
-	instrumentKindUndefined InstrumentKind = 0 // nolint:deadcode,varcheck,unused
+	instrumentKindUndefined InstrumentKind = 0 // nolint:unused
 	// InstrumentKindCounter identifies a group of instruments that record
 	// increasing values synchronously with the code path they are measuring.
 	InstrumentKindCounter InstrumentKind = 1
@@ -74,7 +74,7 @@ type Instrument struct {
 	nonComparable // nolint: unused
 }
 
-// IsEmpty returns if all Instrument fields are their zero-value.
+// IsEmpty reports whether all Instrument fields are their zero-value.
 func (i Instrument) IsEmpty() bool {
 	return i.Name == "" &&
 		i.Description == "" &&
@@ -141,6 +141,10 @@ type Stream struct {
 	// the attribute will not be recorded, otherwise, if it returns true, it
 	// will record the attribute.
 	//
+	// Note that attributes filtered out by a View may still appear on Exemplars,
+	// because Exemplars are recorded with the dropped measurement attributes
+	// when View attribute filtering is applied.
+	//
 	// Use NewAllowKeysFilter from "go.opentelemetry.io/otel/attribute" to
 	// provide an allow-list of attribute keys here.
 	AttributeFilter attribute.Filter
@@ -202,7 +206,15 @@ func (i *int64Inst) Record(ctx context.Context, val int64, opts ...metric.Record
 	i.aggregate(ctx, val, c.Attributes())
 }
 
-func (i *int64Inst) aggregate(ctx context.Context, val int64, s attribute.Set) { // nolint:revive  // okay to shadow pkg with method.
+func (i *int64Inst) Enabled(context.Context) bool {
+	return len(i.measures) != 0
+}
+
+func (i *int64Inst) aggregate(
+	ctx context.Context,
+	val int64,
+	s attribute.Set,
+) { // nolint:revive  // okay to shadow pkg with method.
 	for _, in := range i.measures {
 		in(ctx, val, s)
 	}
@@ -232,6 +244,10 @@ func (i *float64Inst) Add(ctx context.Context, val float64, opts ...metric.AddOp
 func (i *float64Inst) Record(ctx context.Context, val float64, opts ...metric.RecordOption) {
 	c := metric.NewRecordConfig(opts)
 	i.aggregate(ctx, val, c.Attributes())
+}
+
+func (i *float64Inst) Enabled(context.Context) bool {
+	return len(i.measures) != 0
 }
 
 func (i *float64Inst) aggregate(ctx context.Context, val float64, s attribute.Set) {
