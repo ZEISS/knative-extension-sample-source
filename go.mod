@@ -1,6 +1,6 @@
 module github.com/zeiss/knative-extension-sample-source
 
-go 1.23.4
+go 1.24
 
 require (
 	github.com/cloudevents/sdk-go/v2 v2.15.2
@@ -313,7 +313,7 @@ require (
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
 	github.com/kisielk/errcheck v1.8.0 // indirect
 	github.com/kkHAIKE/contextcheck v1.1.5 // indirect
-	github.com/klauspost/compress v1.17.11 // indirect
+	github.com/klauspost/compress v1.18.7 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
 	github.com/klauspost/pgzip v1.2.6 // indirect
 	github.com/kulti/thelper v0.6.3 // indirect
